@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const AR = new window.MINDAR.IMAGE.MindARThree({
 			container: document.body,
-			imageTargetSrc: "targets2.mind"
+			imageTargetSrc: "targets.mind"
 		});
 
 		const {renderer, scene, camera} = AR;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const loader = new GLTFLoader();
 
-		loader.load("sphera.glb", (gltf) => {
+		loader.load("3.glb", (gltf) => {
 			gltf.scene.scale.set(0.025, 0.025, 0.025);
 			gltf.scene.position.set(0, 0, -0.4);
 			anchor.group.add(gltf.scene);
